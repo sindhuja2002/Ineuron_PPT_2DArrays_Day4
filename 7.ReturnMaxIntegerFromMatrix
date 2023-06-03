@@ -1,0 +1,27 @@
+#question 7
+def max_count(m, n, ops):
+    if not ops:
+        return m * n  # No operations, return total count of elements in the matrix
+
+    min_row = min(op[0] for op in ops)  # Find the minimum row value from operations
+    min_col = min(op[1] for op in ops)  # Find the minimum column value from operations
+
+   
+    """
+     for op in ops:
+        m = min(m, op[0])
+        n = min(n, op[1])
+    """
+
+    return min_row * min_col  # Return the count of maximum integers
+
+# Example usage:
+m = 3
+n = 3
+ops = [[2, 2], [3, 3]]
+
+result = max_count(m, n, ops)
+print(result)
+
+#TC - O(n)---coz of max and min func
+#SC - O(1)
