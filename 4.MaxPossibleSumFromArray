@@ -1,0 +1,19 @@
+#question 4
+def array_pair_sum(nums):
+    nums.sort()  # Sort the array in ascending order
+    n = len(nums) // 2
+    max_sum = 0
+
+    for i in range(n):
+        max_sum += nums[2 * i]  # Add the minimum element of each pair
+
+    return max_sum
+
+# Example usage:
+nums = [1, 4, 3, 2]
+
+result = array_pair_sum(nums)
+print(result)
+
+#TC - O(nlogn)----sorting
+#SC - O(1)
